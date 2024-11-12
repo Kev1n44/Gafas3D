@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.text-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.text-display {
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#redTextDisplay {
+  color: #ff0000;
+}
+
+#blueTextDisplay {
+  color: #0000ff;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.filter.red {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.filter.blue {
+  background-color: rgba(0, 0, 255, 0.3);
+}

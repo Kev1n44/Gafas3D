@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulación de Filtro de Color</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="text-container">
+      <textarea id="redTextInput" placeholder="Escribe en rojo..."></textarea>
+      <div id="redTextDisplay" class="text-display"></div>
+    </div>
+    <div class="text-container">
+      <textarea id="blueTextInput" placeholder="Escribe en azul..."></textarea>
+      <div id="blueTextDisplay" class="text-display"></div>
+    </div>
+  </div>
+  <div class="buttons">
+    <button onclick="applyFilter('red')">Filtro rojo</button>
+    <button onclick="applyFilter('blue')">Filtro azul</button>
+    <button onclick="removeFilter()">Restablecer</button>
+    <button onclick="applyTwoFilters()">2 Filtros</button> <!-- Nuevo botón -->
+  </div>
+  <div id="filterLeft" class="filter"></div> <!-- Filtro izquierdo -->
+  <div id="filterRight" class="filter"></div> <!-- Filtro derecho -->
+  <script src="script.js"></script>
+</body>
+</html>
